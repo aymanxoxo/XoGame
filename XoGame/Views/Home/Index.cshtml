@@ -1,0 +1,29 @@
+﻿
+<script src="~/Scripts/jquery-1.6.4.min.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+<script src="signalr/hubs"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/ui-router.js"></script>
+<script src="~/Scripts/angular-messages.min.js"></script>
+<script src="~/ng/app.js"></script>
+<script src="~/ng/filters/errMsg.js"></script>
+<script src="~/ng/directives/match/match.js"></script>
+<script src="~/ng/directives/nameAvailability/nameAvailability.js"></script>
+<script src="~/ng/directives/validator/validator.js"></script>
+<script src="~/ng/controllers/newMainCtrl.js"></script>
+<script src="~/ng/controllers/newLoginCtrl.js"></script>
+
+<base href="/"/>
+
+
+<div ng-app="xoApp" ng-controller="appCtrl" ng-init="initForm(@(ViewBag.authenticated), @(ViewBag.currentPlayer))">
+    <div style="width: 100%; height: 50px; position: fixed; top: 0; background-color: skyblue;">
+        <span ng-if="isAuth">Welcome {{currentPlayer.Name}}</span>
+    </div>
+    <div>
+        <div ui-view></div>
+    </div>
+
+</div>
+
+

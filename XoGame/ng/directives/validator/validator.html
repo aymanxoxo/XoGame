@@ -1,0 +1,5 @@
+﻿
+<div ng-repeat="v in vs" ng-if="v.name == 'required'" ng-show="control.$error.required" style="color: red; font-size: 12px; display: inline">*</div>
+<div ng-messages="control.$error" ng-show="control.$dirty" style="color: red; font-size: 12px;" role="alert">
+    <label ng-repeat="v in vs" ng-message="{{v.name}}">{{v.name | errMsg:{name: display, valu: v.valu} }}</label>
+</div>
